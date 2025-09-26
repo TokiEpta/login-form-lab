@@ -1,39 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login Form</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LabTymoshchuk</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header></header>
-  <main>
-    <form id="form">
-      <fieldset>
-        <legend>Personal Info</legend>
+    <header></header>
+    <main>
 
-        <label for="fname">First Name:</label>
-        <input type="text" id="fname" name="fname" required />
+        <div class="pop-up-over" id="pop-up-over">
+                   <div class="pop-up hidden">
+                        <div class="pop-up-content">
+                            <span class="close-button">&times;</span>
+                            <h2>Success</h2>
+                            <p>Registration successful!</p>
+                            <div class="user-name"></div>
+                            <button class="close">Close</button>
+                        </div>
+                </div>
+        </div>
 
-        <label for="lname">Last Name:</label>
-        <input type="text" id="lname" name="lname" required />
+    <form action="" id="form">
+        <fieldset>
+            <legend>Personal Information</legend>
 
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" required />
+            <label for="name">Name:</label><br />
+            <input type="text" id="name" name="name" required /><br />
+            <label for="email">Email:</label><br />
+            <input type="email" id="email" name="email" required /><br />
+            <label for="password">Password:</label><br />
+            <input type="password" id="password" name="password" required /><br />
+        </fieldset>
+        <br />
+        <button type="submit" id="submit">Submit</button>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required />
-
-        <label class="checkbox-label">
-          <input type="checkbox" id="showpass"> Show/Hide password
-        </label>
-      </fieldset>
-
-      <button type="submit">Submit</button>
+            <div class="popUpWindow" id="popUp" style="display:none;">
+                <div id="popUpCont"></div>
+                <button id="closePopUp">Close</button>
+            </div>
     </form>
-  </main>
-  <footer></footer>
-  <script src="checkbox.js"></script>
+    </main>
+    <footer></footer>
+    <script type="module" src="./index.js"></script>
 </body>
 </html>

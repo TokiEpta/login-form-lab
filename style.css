@@ -99,3 +99,94 @@ button:focus {
   outline: none;
   box-shadow: 0 0 8px rgba(74, 144, 226, 0.5);
 }
+
+.pop-up-over {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.45);
+  z-index: 1000;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
+  opacity: 1;
+  visibility: visible;
+}
+
+.pop-up-over.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.pop-up {
+  width: 90%;
+  max-width: 420px;
+  border-radius: 10px;
+  transform: translateY(0);
+  transition: transform 0.25s ease, opacity 0.25s ease;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.pop-up-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 400px;
+  width: 100%;
+  height: 300px;
+  background-color: white;
+  position: relative;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.user-name {
+  font-size: 24px;
+  font-weight: 700;
+  margin-top: 8px;
+  min-height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  word-break: break-word;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  font-size: 24px;
+  cursor: pointer;
+  line-height: 1;
+  border: none;
+  background: transparent;
+  color: #333;
+  padding: 4px;
+}
+
+button.close {
+  background: #4A90E2;
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button.close:hover {
+  background: #357ABD;
+}
+
+.pop-up.hidden {
+  transform: translateY(-40px);
+  opacity: 0;
+  pointer-events: none;
+}
